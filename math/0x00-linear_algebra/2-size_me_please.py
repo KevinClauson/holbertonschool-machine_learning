@@ -2,18 +2,15 @@
 """Calculates the shape of a matrix"""
 
 
-def matrix_shape(matrix):
+def matrix_shape(matrix, size=[]):
     """
-        Calculates the shape of a matrix
+        Calculates the shape of a matrix using tail recursion
+        Seee alternate way in the 2-main file
         matrix: is the array to calculate the shape of
-
+        size: is the shape of the matrix
         Return: size of matrix which is a list of integers
     """
-    if not matrix or len(matrix) == 0:
-        return [0]
-
-    size = [len(matrix)]
-    while type(matrix[0]) is list:
-        size.append(len(matrix[0]))
-        matrix = matrix[0]
-    return size
+    if type(matrix) is list:
+        return matrix_shape(matrix[0], size + [len(matrix)])
+    else:
+        return size
