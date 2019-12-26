@@ -10,7 +10,7 @@ def matrix_shape(matrix):
         Return: size of matrix which is a list of integers
     """
     if not matrix or len(matrix) == 0:
-        return [0] 
+        return [0]
 
     size = [len(matrix)]
     while type(matrix[0]) is list:
