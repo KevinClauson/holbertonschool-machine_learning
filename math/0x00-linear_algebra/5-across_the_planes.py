@@ -9,10 +9,10 @@ def add_matrices2D(mat1, mat2):
         mat2: a matrix
         Return: a matrix that is sum of other two
     """
+    if len(mat1) != len(mat2) or len(mat1[0]) != len(mat2[0]):
+        return None
     s_matrix = []
     for i, row in enumerate(mat1):
-        if len(mat1[i]) != len(mat2[i]):
-            return None
         for j, _ in enumerate(mat1[i]):
             if i == 0:
                 s_matrix.append([mat1[i][j] + mat2[i][j]])
