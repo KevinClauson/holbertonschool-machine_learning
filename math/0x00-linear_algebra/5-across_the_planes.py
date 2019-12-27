@@ -12,10 +12,8 @@ def add_matrices2D(mat1, mat2):
     if len(mat1) != len(mat2) or len(mat1[0]) != len(mat2[0]):
         return None
     s_matrix = []
-    for i, row in enumerate(mat1):
-        for j, _ in enumerate(mat1[i]):
-            if i == 0:
-                s_matrix.append([mat1[i][j] + mat2[i][j]])
-            else:
-                s_matrix[j].append(mat1[i][j] + mat2[i][j])
+    for i in range(len(mat1)):
+        s_matrix.append([])
+        for j in range(len(mat1[0])):
+            s_matrix[i].append(mat1[i][j]+mat2[i][j])
     return s_matrix
