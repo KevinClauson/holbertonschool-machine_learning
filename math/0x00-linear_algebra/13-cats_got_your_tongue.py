@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Concatenates two matrices along a specific axis"""
+import numpy as np
 
 
 def np_cat(mat1, mat2, axis=0):
@@ -10,5 +11,4 @@ def np_cat(mat1, mat2, axis=0):
         axis: integer that is for the axis
         Return: transpose a matrix on the axis
     """
-    import numpy as np
     return np.concatenate((mat1, mat2), axis=axis)
