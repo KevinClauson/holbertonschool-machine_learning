@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Func for mult of matrices"""
 import numpy as np
 
 
