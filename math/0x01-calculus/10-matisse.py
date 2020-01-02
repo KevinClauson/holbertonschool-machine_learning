@@ -8,7 +8,7 @@ def poly_derivative(poly):
         poly: is a list of coefficients representing a polynomial
         Return: a new list of coefficients for the derivative of polynomial
     """
-    if not poly:
+    if not poly or type(poly) is not list or len(poly) < 1 or type(poly[0]) is not int:
         return None
     der = []
     for i, val in enumerate(poly):
