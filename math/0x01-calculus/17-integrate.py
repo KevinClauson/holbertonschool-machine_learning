@@ -12,8 +12,8 @@ def poly_integral(poly, C=0):
     """
     integral = [C]
     for i, val in enumerate(poly):
-        if val == 0:
-            integral.append(0)
+        if val % (i+1):
+            integral.append(val/(i+1))
         else:
-            integral.append(val/(i + 1))
+            integral.append(val//(i + 1))
     return integral
