@@ -10,8 +10,12 @@ def poly_integral(poly, C=0):
         Return: a new list of coefficients representing the integral
         of the polynomial
     """
+    if type(poly) is not list or len(poly) == 0 or type(C) is not int:
+        return None
     integral = [C]
     for i, val in enumerate(poly):
+        if type(val) is not int:
+            return None
         if val % (i+1):
             integral.append(val/(i+1))
         else:
