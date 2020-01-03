@@ -20,4 +20,9 @@ def poly_integral(poly, C=0):
             integral.append(val/(i+1))
         else:
             integral.append(val//(i + 1))
+    for i in range(len(integral) - 1, 0, -1):
+        if integral[i] == 0:
+            integral.pop(i)
+        else:
+            break
     return integral
