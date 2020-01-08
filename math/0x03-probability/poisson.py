@@ -18,6 +18,6 @@ class Poisson:
         if data and len(data) < 2:
             raise ValueError('data must contain multiple values')
         if data:
-            self.lambtha = sum(data) / len(data)
+            self.lambtha = (sum(data) / len(data)) / 1.0
         else:
             self.lambtha = lambtha/1.0
