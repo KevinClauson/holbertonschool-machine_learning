@@ -11,7 +11,7 @@ class Poisson:
             data: is a list of the data to be used to estimate the distribution
             lambtha: is the expected number of occurences in a given time frame
         """
-        if lambtha <= 0:
+        if data and lambtha <= 0:
             raise ValueError('lambtha must be a positive value')
         if data and type(data) is not list:
             raise TypeError('data must be a list')
